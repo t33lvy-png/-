@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>小枫的个人主页</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f0f14;
+      color: #eaeaf0;
+      line-height: 1.6;
+    }
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: radial-gradient(circle at top, #1f1f2e, #0f0f14);
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      opacity: 0.8;
+      margin-bottom: 2rem;
+    }
+    header button {
+      padding: 0.8rem 1.6rem;
+      border-radius: 999px;
+      border: none;
+      background: #6c7cff;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #1a1a25;
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+    .card:hover { transform: translateY(-6px); }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      opacity: 0.6;
+    }
+    a { color: #6c7cff; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>你好，我是小枫</h1>
+  <p>个人主页 · 学习前端 · 持续进化中</p>
+  <button onclick="scrollToSection('about')">了解我</button>
+</header>
+
+<section id="about">
+  <h2>关于我</h2>
+  <p>这是我的第一个真正上线的个人主页。用来记录学习、展示项目，也证明我能把东西做到上线。</p>
+</section>
+
+<section id="projects">
+  <h2>项目展示</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>个人主页</h3>
+      <p>HTML / CSS / JS</p>
+    </div>
+    <div class="card">
+      <h3>待完成</h3>
+      <p>下一个项目正在路上</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>联系我</h2>
+  <p>Email：example@email.com</p>
+  <p>GitHub：<a href="#">https://github.com/yourname</a></p>
+</section>
+
+<footer>
+  © 2025 小枫
+</footer>
+
+<script>
+  function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
